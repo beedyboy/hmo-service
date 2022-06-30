@@ -8,7 +8,7 @@ const app = express();
 
 const { PORT, MONGO_URL, DB_URL } = process.env;
 
-dbConnect(DB_URL);
+dbConnect(MONGO_URL);
 
 const origin = "*";
 app.use(
