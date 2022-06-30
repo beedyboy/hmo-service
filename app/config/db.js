@@ -7,7 +7,7 @@ import mongoose from "mongoose";
             useNewUrlParser: true,
             useUnifiedTopology: true
         }).then(() => {
-            console.log('Consultation database connected')
+            console.log('HMO database connected')
     }).catch(err => console.log(err.message))
     } catch (error) {
         console.log(`Error with hmo db [${error}]`)

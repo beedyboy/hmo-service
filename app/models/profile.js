@@ -10,10 +10,8 @@ const profileSchema = new Schema(
     state: { type: String, default: "" },
     region: { type: String, default: "" },
     landmark: { type: String, default: "" },
-    phone: { type: String, default: "" }, 
-    license: { type: String, default: "" },  
+    phone: { type: String, default: "" },  
     regNumber: { type: String, default: "" },
-    officePic: { type: String, default: "" }, 
   },
   { timestamps: true }
 );

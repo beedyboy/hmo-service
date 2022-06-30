@@ -1,12 +1,14 @@
 import express from "express"; 
 import routes from './routes';
+import cors from "cors";
+import dotenv from "dotenv";
 import dbConnect from './config/db';
-
+dotenv.config(); 
 const app = express();
 
-const { PORT, MONGO_URL } = process.env;
+const { PORT, MONGO_URL, DB_URL } = process.env;
 
-dbConnect(MONGO_URL);
+dbConnect(DB_URL);
 
 const origin = "*";
 app.use(
