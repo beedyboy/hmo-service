@@ -1,0 +1,10 @@
+import express from "express";  
+import ProfileController from '../controllers/profile';
+const router = express.Router();
+const profile = new ProfileController();
+router.get("/", profile.getAll);
+router.get("/:id", profile.getById); 
+router.post("/", profile.create); 
+router.put("/", profile.update);  
+router.delete("/:id", profile.remove);
+export default router;

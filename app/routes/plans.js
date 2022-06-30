@@ -1,0 +1,10 @@
+import express from "express"; 
+import PlanController from "../controllers/plans";
+const router = express.Router();
+const plans = new PlanController();
+router.get("/", plans.getAll);  
+router.get("/:id", plans.getById); 
+router.post("/", plans.create); 
+router.put("/", plans.update); 
+router.delete("/:id", plans.remove);
+export default router;
